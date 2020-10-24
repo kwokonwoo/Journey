@@ -4,7 +4,7 @@
         <ul>
             <li
               class="item border-bottom"
-              v-for="item of recommendList"
+              v-for="item of list"
               :key="item.id"
             >
                 <img class="item-img" :src="item.imgUrl" />
@@ -21,25 +21,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1703/f0/f0ee2699a3abb376a3.water.jpg_200x200_826d3518.jpg',
-        title: '牛首山文化旅游区',
-        desc: '佛教牛头禅的发祥地'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1703/f0/f0ee2699a3abb376a3.water.jpg_200x200_826d3518.jpg',
-        title: '牛首山文化旅游区',
-        desc: '佛教牛头禅的发祥地'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1703/f0/f0ee2699a3abb376a3.water.jpg_200x200_826d3518.jpg',
-        title: '牛首山文化旅游区',
-        desc: '佛教牛头禅的发祥地'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>

@@ -4,7 +4,7 @@
         <ul>
             <li
               class="item border-bottom"
-              v-for="item of recommendList"
+              v-for="item of list"
               :key="item.id"
             >
               <div class="item-img-wrapper">
@@ -22,25 +22,8 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1811/ed/bf2bc72af591d5.jpg_r_640x214_f9f1bfcc.jpg',
-        title: '牛首山文化旅游区',
-        desc: '佛教牛头禅的发祥地'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1811/ed/bf2bc72af591d5.jpg_r_640x214_f9f1bfcc.jpg',
-        title: '牛首山文化旅游区',
-        desc: '佛教牛头禅的发祥地'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1811/ed/bf2bc72af591d5.jpg_r_640x214_f9f1bfcc.jpg',
-        title: '牛首山文化旅游区',
-        desc: '佛教牛头禅的发祥地'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
@@ -48,14 +31,13 @@ export default {
 <style lang="stylus" scoped>
   @import '~styles/mixins.styl'
   .title
-    margin-top: .2rem
     line-height: .8rem
     background: #eee
     text-indent: .2rem
   .item-img-wrapper
     overflow: hidden
     height: 0
-    padding-bottom: 33.9%
+    padding-bottom: 37.09%
     .item-img
       width: 100%
   .item-info

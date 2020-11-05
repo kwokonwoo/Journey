@@ -1,7 +1,7 @@
 <template>
   <div>
     <city-header></city-header>
-    <city-search></city-search>
+    <city-search :cities="cities"></city-search>
     <city-list
       :cities="cities"
       :hot="hotCities"
@@ -38,9 +38,9 @@ export default {
   methods: {
     getCityInfo () {
       axios.get('/api/city.json')
-        .then(this.handloeGetCityInfoSucc)
+        .then(this.getCityInfoSucc)
     },
-    handloeGetCityInfoSucc (res) {
+    getCityInfoSucc (res) {
       res = res.data
       if (res.ret && res.data) {
         const data = res.data

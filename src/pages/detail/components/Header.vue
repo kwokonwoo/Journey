@@ -46,7 +46,11 @@ export default {
     }
   },
   activated () {
+    // 全局组件解绑
     window.addEventListener('scroll', this.handleScroll)
+  },
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>

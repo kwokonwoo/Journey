@@ -21,6 +21,7 @@ export default new Router({
       name: 'Detail',
       component: Detail
     }],
+  // 避免滑动影响组件页面
   scrollBehavior (to, from, savedPosition) {
     return {x: 0, y: 0}
   }
